@@ -1,0 +1,78 @@
+set nocompatible
+syntax on
+filetype plugin indent on
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set history=200
+set nu
+set relativenumber
+call pathogen#infect()
+set autochdir
+colorscheme wombat
+set cursorline 
+hi CursorLine term=bold cterm=bold
+set ignorecase smartcase nowrapscan infercase
+set hlsearch incsearch
+" Create a shortcut to mute highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" cd i:
+
+" Use the system clipboard for copy and paste
+set clipboard=unnamed
+
+set encoding=utf-8
+set fileencodings=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set termencoding=utf-8
+set guifontwide=NSimsun:h12
+
+" Set column width
+set textwidth=79
+" highlight column after 'textwidth'
+set colorcolumn=+1
+
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" map hjkl operate on display lines rather than on real lines.
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
+" map F5 to run ctags generation
+nnoremap <f5> :!ctags -R<CR>
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Enable file type detection
+  filetype on
+   
+  " Syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+   
+  " Customisations based on house-style (arbitrary)
+  " autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+  " autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+  " autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+   
+  " Treat .rss files as XML
+  autocmd BufNewFile,BufRead *.rss setfiletype xml
+endif
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Consolas\ 13.6
+  elseif has("gui_photon")
+    set guifont=Consolas:s13.6
+  elseif has("gui_kde")
+    set guifont=Consolas/13.6/-1/5/50/0/0/0/1/0
+  elseif has("x11")
+    set guifont=-*-consolas-medium-r-normal-*-*-180-*-*-m-*-*
+  else
+    set guifont=Consolas:h13.6:cDEFAULT
+  endif
+endif
+
+

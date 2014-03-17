@@ -1,0 +1,8 @@
+Location of vimrc:
+:echo $HOME
+
+mklink _vimrc c:\settings\vim\_vimrc
+mklink /d vimfiles c:\settings\vim\vimfiles
+
+AutoHotKey:
+
