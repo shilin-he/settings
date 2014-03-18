@@ -5,4 +5,11 @@ mklink _vimrc c:\settings\vim\_vimrc
 mklink /d vimfiles c:\settings\vim\vimfiles
 
 AutoHotKey:
+mklink AutoReload.ahk c:\settings\ahk\AutoReload.ahk
+mklink kb.ahk c:\settings\ahk\kb.ahk
+
+Cmder:
+mklink /d config c:\settings\cmder\config
+
+
 
