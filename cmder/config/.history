@@ -1,0 +1,1000 @@
+exit
+d:
+cd temp/
+rd clojure-noob\ /s
+eixt
+d:
+cd temp/
+rd clojure-noob\
+rd clojure-noob\ /s
+d:
+cd temp\clojure-noop\
+cls
+ls
+dir
+cls
+lein repl
+d:
+cd temp\clojure-noob\
+vim
+rd clojure-noob /s
+dir cl*.*
+cls
+cd..
+rd clojure-noob\ /s
+cls
+dir clo*.*
+lein new app clojure-noop
+cd clojure-noop\
+vim
+cls
+c:
+cd vimfiles
+cd bundle\
+ls
+rd vim-classpath\
+rd vim-classpath\ /s
+cls
+d:
+vim
+git init
+cls
+lein repl
+cls
+vim
+c:
+ls
+rd vim-clojure-static\ /s
+d:
+vim
+c:
+ls
+rd vim-fireplace\ /s
+cls
+ls
+d:
+vim
+cls
+vim
+cls
+cd /vim74
+cls
+dir *.exe
+vim
+gvim
+python
+cd vimfiles\
+cd bundle\
+ls
+git clone git clone git://github.com/tpope/vim-fireplace.git
+git clone git://github.com/tpope/vim-fireplace.git
+git clone git://github.com/tpope/vim-classpath.git
+cls
+d:
+cd temp\clojure-noop\
+cls
+lein repl
+python
+ruby
+irb
+cls
+cd /vim74
+vim
+cd \
+cls
+vim
+d:
+vim
+cd \Vim74\
+vim
+python
+cd \
+cls
+ls
+ruby --version
+cls
+lein repl
+python
+cd \Vim74\
+vim
+python
+cls
+gvim
+cd..
+cls
+lein repl
+d:
+cd temp\hobbit\
+lein repl
+cls
+lein repl
+d:
+cd temp
+lean new app hobbit
+lein new app hobbit
+cd hobbit\
+ls
+dir
+cls
+vim
+git init
+cls
+vim
+cls
+vim
+cls
+vim
+c:
+cd vimfiles\
+cd bundle\
+dir
+rd rainbow_parentheses.vim\ /s
+cls
+git clone https://github.com/vim-scripts/Rainbow-Parentheses-Improved-and2.git
+ls
+d:
+vim
+d:
+cd temp\fwpd\
+cls
+lein repl
+cls
+lein repl
+lein repl
+cls
+d:
+cd temp
+lein new app fwpd
+cd fwpd
+cls
+git init
+vim
+cls
+vim
+cd..
+cls
+lein new app divine-cheese-code
+cd divine-cheese-code\
+vim
+ls
+cd src
+ls
+cd..
+dir
+cd src
+dir
+cd divine_cheese_code\
+dir
+cd visualization\
+dir
+cd ../..
+cd..
+vim
+cls
+viim
+vim
+d:
+cd temp\fwpd\
+cls
+lein repl
+cls
+lein repl
+cls
+lein repl
+cls
+lein repl
+cls
+lein repl
+cls
+lein repl
+cls
+cd ..\divine-cheese-code\
+cls
+ls
+git init
+dir
+cd src
+dir
+cd vis
+cd visualization\
+ls
+cls
+cd..
+cls
+lein repl
+cls
+lein repl
+cls
+d:
+cd \temp\divine-cheese-code\
+cls
+dir
+cd src
+ls
+cd..
+ls
+cd src
+cl
+dir
+cd divine_cheese_code\
+ls
+cd..
+dir
+move
+move visualization\ divine_cheese_code\
+move visualization divine_cheese_code\
+dir
+cd divine_cheese_code\
+ls
+cd visualization\
+ls
+cls
+dir
+c:
+cd vimfiles\
+ls
+cd bundle\
+ls
+de vim-fireplace\
+rd vim-fireplace\ /s
+rd vim-classpath\ /s
+ls
+cd vimfiles\
+cd bundle\
+ls
+cd ctrlp.vim\
+git pull
+d:
+cd \temp\divine-cheese-code\
+lein run
+lein repl
+cls
+lein repl
+java --version
+java -v
+java
+java -version
+d:
+git clone https://github.com/stuarthalloway/programming-clojure.git
+cd programming-clojure\
+cls
+dir
+lein dep
+lein deps
+cls
+lein repl
+cls
+lein repl
+d:
+d programming-clojure\
+cd programming-clojure\
+cls
+lein test
+d:
+cd \temp\divine-cheese-code\
+lein repl
+cls
+lein repl
+d:
+cd temp\divine-cheese-code\
+cls
+vim
+cls
+vim
+cls
+vim
+d:
+cd programming-clojure\
+lein repl
+cd \
+cls
+dir
+python
+cd python27
+python
+cls
+cd..
+dir
+ruby
+ruby -v
+dir
+ruby -v
+d:
+cd programming-clojure\
+cls
+lein repl
+d:
+cd programming-clojure\
+cls
+lein repl
+cd "\Program Files (x86)\
+cd git/bin
+cls
+dir
+dir sh*.*
+sh -h
+sh --help
+sh -c help
+sh --heop
+sh --help login
+sh --login
+"\Program Files (x86)\git\bin\
+cd "\Program Files (x86)\git\bin\
+cls
+sh
+cls
+sh --login
+sh -i
+sh --login -i
+cls
+d:
+cls
+sh --login 
+cls
+sh --login -i
+cls
+d:
+cd Training\jp\prep\
+cls
+dir
+cls
+dir
+spec
+ruby spec
+spec
+specs
+cls
+dir
+dir spec*.*
+specs
+ruby sepcs
+ruby ./spec
+irb
+cls
+dir
+rake
+git branch
+git status
+git branch
+git branch -a
+git branch -r
+dir
+start_new_exercise 
+cls
+sh --login -i
+cd /
+cls
+dir
+cd RubyDevKit\
+cls
+dk.rb init
+dk.rb review
+dk.rb install
+gem update
+cls
+cd..
+d:
+cd sc
+dir
+git clone https://github.com/machine/machine.specifications.git
+cls
+cd machine.specifications\
+dir
+gem intall bundle
+gem install bundle
+bundle install
+cls
+rake
+cd /Source/machine.specifications
+dir
+cd source
+dir
+cd machine.specifications
+dir
+vim fody.targets
+cd..
+rake
+cls
+ cd Source\Machine.Specifications
+vim Fody.targets 
+cd../..
+rake
+cls
+cd Build\
+dir
+cd Debug\
+dir
+ls
+dir /p
+cd ../..
+cls
+dir *.bat /s
+cd Build\
+dir
+cd debug
+dir
+dir /ad
+dir /p
+vim InstallResharperRunner.8.1.bat
+InstallResharperRunner.8.1.bat 
+cls
+dir
+cd..
+cd Misc\
+dir
+cls
+dir
+cd..
+cd /
+cls
+cd programming-clojure\
+dir
+ls
+cd src
+ls
+cd examples\
+ls
+vim primes.clj 
+cd..
+cls
+ls
+cd..
+cls
+ls
+cd src\examples\
+vim sequences.clj 
+d
+d:
+cd \programming-clojure\
+lein repl
+cls
+d:
+cdsc
+cd sc
+cd machine.specifications\
+dri
+dir
+cd Build\
+dir
+cd debug
+ls
+dir
+dir *.bat
+InstallResharperRunner.8.1.bat 
+d;
+d:
+cd Training\
+cd jp
+cls
+git clone git@github.com:maxhe/prep.git
+dir
+cls
+git clone https://github.com/maxhe/prep.git
+cls
+dir
+cd prep\
+dir
+vim build
+vim rakefile.rb 
+cls
+git
+cls
+sh --login -i
+cls
+dir
+cd source\
+ls
+cd..
+cls
+dir
+git remote update
+git pull all
+git pull --all
+git branch
+git branch -a
+git checkout origin/20121106200338712
+git status
+git checkout --head
+cd..
+rd prep /s
+dir
+cd prep
+dir
+cd..
+rd prep\
+rd prep /s
+ls
+rd prep /s
+ls
+cls
+git clone https://github.com/maxhe/prep.git
+git remote update
+cd prep
+git remote update
+git pull --all
+git branch
+git branch -a
+git checkout origin/20121106200338712
+git status
+git branch
+ls
+cd source
+ls
+cd prep
+ls
+cd utility\
+ls
+cd..
+cls
+dri
+dir
+ls
+git status
+cls
+cd doc
+ls
+cd docs\
+e.
+start
+start gems.html 
+start /?
+cls
+ls
+start file_events.html 
+start gems.html 
+cd \course\
+ls
+cd prep
+cls
+ls
+git branch
+git checkout 20121106200338712
+git status
+git add * -m "test"
+git add -A -m "test"
+git add -A 
+git commit
+git commit -m "test"
+git status
+cls
+git branch
+git checkout 20121106200338712
+ls
+git branch
+git checkout 20121106090843427
+vim
+cd app
+cd ../app
+cls
+dir
+cls
+rake build:run
+rake 
+cls
+d:
+sh --login -i
+cd d:\Backup\
+ls
+d:
+ls
+cls
+d:
+cd course\app
+rake build:run
+rake 
+cd ..\setup\
+cls
+cd reshar
+ls
+cd dev_tools\
+cd resharper\
+ls
+vim resharper.DotSettings 
+cd..
+ls
+cd bash\
+ls
+vim bashrc.dotfile 
+cd..
+ls
+cd git
+ls
+vim gitconfig.dotfile 
+d;
+d:
+cd Exercise\
+cd GemBlock\
+ls
+cd GemBlock\
+ls
+vim Class1.cs 
+cls
+c:
+md utils
+cd /
+md utils
+cls
+cd utils
+ls
+cd firefox\
+dir firefox.exe
+cd..
+cd iis_express\
+dir iis*.exe
+cd..
+cls
+d:
+cd course
+cd \course\
+cd app\source\
+cd config\
+ls
+vim applicationhost.config
+cd..
+cls
+rake build:run
+cd source\
+ls
+cd app
+cd config
+ls
+cd../con
+cd..
+cd config
+ls
+vim applicationhost.config
+cd..
+cls
+rake build:run
+vim start_web_app.bat
+cat jp.settings 
+:q
+rake build:run
+cd source\
+cd config
+ls
+md backup
+mv applicationhost.config.* backup
+ls
+mv applicationhost.config backup\
+ls
+c:
+cd iis
+ls
+cd iis_express\
+ls
+cd AppServer\
+ls
+copy applicationhost.config d:
+d:
+ls
+copy applicationhost.config applicationhost.config.erb
+ls
+cd..
+ls
+cd app.web.ui
+ls
+cd bin
+ls
+cd..
+cd config\
+ls
+cd backup
+vim applicationhost.config
+cd..
+vim applicationhost.config
+cd..
+cls
+ls
+cd repositories\
+cd de
+cd developwithpassion\
+l
+sls
+ls
+cl
+cls
+git clone git@github.com:shilin-he/devtools.git
+cd ~
+d:cd
+d:
+cd course\
+cd app
+cls
+vim
+cd config
+ls
+cd source\
+cd config
+ls
+cd bak
+cd backup\
+ls
+vim applicationhost.config.erb
+copy . ..
+cls
+cd..
+ls
+del applicationhost.config.*
+ls
+cls
+cd back
+cd backup\
+ls
+copy *.* ..
+cd..
+cls
+ls
+copy applicationhost.config applicationhost.config.erb
+vim applicationhost.config.erb
+cd ../..
+vim shilin.settings 
+vim 
+vim
+:q
+cd repositories\developwithpassion\devtools\
+cd windows\
+cd autohotkey\
+sart partial_ahk_resharper.ahk 
+start partial_ahk_resharper.ahk 
+ls
+partial_ahk_general.ahk 
+merge_header_001_header.ahk 
+merge_header_002_shared_variables.ahk.mustache 
+ls
+partial_ahk_caps_as_windows_key.ahk 
+partial_ahk_general.ahk 
+cd repositories\
+cd developwithpassion\devtools\
+ls
+vim dev_run 
+type Gemfile 
+ls
+ls ex*.*
+dir ex*.*
+cls
+d:
+cd course\
+ls
+cd setup
+ls
+cd dev_tools\
+ls
+cd resharper\
+ls
+cd..
+cd bash
+ls
+cd..
+ls
+cls
+ls
+cd mingw
+ls
+cd..
+cls'
+cls
+cd..
+ls
+cd..
+ls
+cls
+cd /sc
+ls
+c:
+cd /sc
+ls
+cd repositories\
+ls
+cd developwithpassion\devtools\
+ls
+cd automation\
+cls
+ls
+cd autohotkey\
+ls
+cd..
+ls
+vim msys_kick_off 
+git status
+cd windows\
+ls
+cd registry_entries\
+ls
+cd..
+ls
+cd autohotkey\
+cls
+dir
+vim .
+d:
+cd sc
+dir
+git clone git://github.com/developwithpassion/devtools.git
+git clone git://github.com/shilin-he/devtools.git
+dir
+cd devtools\
+cd windows\
+cd autohotkey\
+ls
+vim partial_ahk_resharper.ahk 
+cd /ahk
+cls
+vim .
+cls
+vim.
+cls
+vim .
+exit
+d:
+cd ahk
+ls
+cd /sc
+cd devtools\
+ls
+cd automation\
+ls
+cd visual_studio\
+ls
+cd..
+ls
+cd autohotkey\
+ls
+cd..
+ls
+cd vim
+ls
+cd..
+ls
+cd..
+ls
+vim dev_run 
+cd shared\
+ls
+cd dotfiles\
+ls
+cd vim
+ls
+vim vimrc.dotfile.mustache 
+cd..
+ls
+cd git
+ls
+vim gitconfig.dotfile.mustache 
+ls
+cd..
+ls
+cd ..
+ls
+cd..
+ls
+cd mac
+ls
+vim apps_to_install_on_new_image.markdown 
+cd..
+ls
+cd expansions\
+ls
+cd..
+cd \course
+ls
+cd prep
+ls
+git status
+git branch
+git checkout starting_point
+git reset --hard
+git st
+git status
+git reset --hard
+git clean -f -d
+git clean -f -x -d
+git status
+cd /ahk
+ls
+start ahk_visual_studio.ahk 
+d:
+cd ahk
+vim e.
+vim .
+farmanager
+cls
+far
+d:
+cd ahk
+cls
+vim .
+d:
+cd course\
+cd prep\
+ls
+git status
+git checkout --hard
+git rest --hard
+git reset --hard
+git clean -f -d
+git clean -f -x
+git status
+git branch
+git checkout starting_point
+ls
+git status
+clip
+ssh -v
+ssh -v git@github.com
+git config user.email
+git config user.name
+cls
+vim run_first
+rake -D
+rake growl:start
+vim push 
+git status
+cls
+d:
+cd course\prep\
+ls
+dir /ad
+cd source
+ls
+dir
+cd..
+ls
+cd build\
+ls
+far
+d:
+cd ahk
+vim .
+c:
+cd SkyDrive\
+ls
+cd ahk
+cls
+dir
+start try.ahk 
+vim try.ahk 
+d:
+cd JPCourseRecording\
+cd dnr_tv\
+ls
+start design_pattern_3.wmv 
+start design_pattern_4.wmv 
+start design_pattern_5.wmv 
+cd..
+ls
+cd dnr_tv\
+ls
+start tdd_1.wmv 
+start tdd_2.wmv 
+c:
+cd \
+cls
+dir
+git clone git@github.com:shilin-he/settings.git
+cd settings\
+ls
+cd ahk
+start kb.ahk 
+cd ..
+cd vim
+ls
+vim _vimrc
+vim
+vim .
+cd /ahk
+d:
+cd ahk
+starty try.ahk 
+start try.ahk 
+vim try.ahk 
+c:
+cd SkyDrive\
+ls
+cd ahk
+start try.ahk 
+vim try.ahk
+vim
+vim 
+vim
+exit

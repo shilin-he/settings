@@ -1,33 +1,24 @@
 set nocompatible
+call pathogen#infect()
 syntax on
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-set history=200
-set nu
-set relativenumber
-call pathogen#infect()
+"source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
 set autochdir
 colorscheme wombat
-set cursorline 
-hi CursorLine term=bold cterm=bold
-set ignorecase smartcase nowrapscan infercase
-set hlsearch incsearch
-" Create a shortcut to mute highlighting
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-" cd i:
-
-" Use the system clipboard for copy and paste
-set clipboard=unnamed
-
-set encoding=utf-8
-set fileencodings=utf-8
-set fileencodings=ucs-bom,utf8,prc
-set termencoding=utf-8
-set guifontwide=NSimsun:h12
+set cursorline
+highlight CursorLine term=bold cterm=bold
+set nu
+set relativenumber
+set history=200
+set ignorecase smartcase wrapscan infercase
+runtime macros/matchit.vim
 
 " Set column width
 set textwidth=79
-" highlight column after 'textwidth'
+" Highlight column after 'textwidth'
 set colorcolumn=+1
 
 cnoremap <C-p> <Up>
@@ -39,8 +30,14 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
-" map F5 to run ctags generation
-nnoremap <f5> :!ctags -R<CR>
+" Use the system clipboard for copy and paste
+set clipboard=unnamed
+
+set hlsearch incsearch
+" Mute search result highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+set hidden
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -68,11 +65,84 @@ if has("gui_running")
     set guifont=Consolas:s13.6
   elseif has("gui_kde")
     set guifont=Consolas/13.6/-1/5/50/0/0/0/1/0
-  elseif has("x11")
+  elseif has("x13.6")
     set guifont=-*-consolas-medium-r-normal-*-*-180-*-*-m-*-*
   else
     set guifont=Consolas:h13.6:cDEFAULT
   endif
 endif
 
+" Chinese support
+set encoding=utf-8
+set fileencodings=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set termencoding=utf-8
+set guifontwide=NSimsun:h12
+set diffexpr=MyDiff()
 
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+
+xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+
+function! s:VSetSearch()
+    let temp = @s
+    norm! gv"sy
+    let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+    let @s = temp
+endfunction
+
+
+" qargs
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+
+" map F5 to run ctags generation
+nnoremap <f5> :!ctags -R<CR>
+
+" Change the working directory to the directory of the file being edited,
+" print the working directory after change.
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+" Change the working directory to the previously visited folder
+" cd -
+
+" Always shows a status line
+set laststatus=2
+" Adds full file path to the existing status line
+set statusline+=%F
+
+" Run JSHint on the current buffer every time you write it.
+autocmd! BufWritePost *.js JSHint
+
+" Rainbow Parentheses 
+let g:rainbow_active = 1
