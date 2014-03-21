@@ -35,7 +35,7 @@ Capslock::Esc
 
 ;==================================================
 ;bring up the R# context actions
-actions="cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr"
+actions="gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr"
 +Capslock::
 Input,command_input,T1/1,{enter}{esc}{tab},%actions%
 if (ErrorLevel = Max | ErrorLevel = Timeout )
@@ -243,19 +243,39 @@ return
 ;R# Actions
 ;===================================================
 
+;Go to declaration
+gd:
+send, !rng
+return
+
 ;Naviagate to containing declaration
 cd:
 Send, !rnc
 return
 
+;Go to base symbols
+gb:
+Send, !{Home}
+return
+
+;Go to derived(sub) symbols
+gs:
+Send, !{End}
+return
+
+;Go to Usage
+gu:
+Send, +!{F12}
+return
+
 ;Find Usages
 fu:
-Send, !{F7}
+Send, !rff
 return
 
 ;Find Window
 fw:
-Send, ^!u
+Send, ^!{F12}
 return
 
 ;Highlight Current Usages
@@ -275,7 +295,7 @@ return
 
 ;Goto file
 gf:
-Send, ^+n
+Send, ^+t
 return
 
 ;Turn on solution wide error analysis
@@ -348,12 +368,12 @@ return
 
 ;Goto File Member
 gm:
-Send,^{F12}
+Send,!\
 return
 
 ;Goto symbol
 sy:
-Send, ^+!n
+Send, +!t
 return
 
 ;Live Templates
@@ -414,7 +434,7 @@ return
 
 ;surround with template
 su:
-send, ^!j
+send, ^eu
 return
 
 ;================================================================
