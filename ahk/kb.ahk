@@ -35,7 +35,7 @@ Capslock::Esc
 
 ;==================================================
 ;bring up the R# context actions
-actions="fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr"
+actions="cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr"
 +Capslock::
 Input,command_input,T1/1,{enter}{esc}{tab},%actions%
 if (ErrorLevel = Max | ErrorLevel = Timeout )
@@ -89,6 +89,15 @@ return
 vm:
 activate_or_run_program_by_ahk_class("Vim", "C:\Program Files (x86)\Vim\vim74\gvim.exe")
 return
+
+cy:
+activate_or_run_program_by_ahk_class("mintty", "C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -")
+return
+
+cm:
+activate_or_run_program_by_ahk_class("VirtualConsoleClass", "c:\cmder\cmder.exe")
+return
+
 
 ol:
 activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Office\Office15\outlook.exe")
