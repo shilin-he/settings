@@ -48,7 +48,7 @@ Capslock::Esc
 
 ;==================================================
 ;bring up the R# context actions
-actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr"
+actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch"
 +Capslock::
 Input,command_input,T1/1,{enter}{esc}{tab},%actions%
 if (ErrorLevel = Max | ErrorLevel = Timeout )
@@ -95,8 +95,14 @@ vs:
 activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe")
 return
 
+; Firefox
 ff:
 activate_or_run_program_by_ahk_class("MozillaWindowClass", "firefox.exe")
+return
+
+; Chrome
+ch:
+activate_or_run_program_by_ahk_class("Chrome_WidgetWin_1","C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
 return
 
 vm:
@@ -458,6 +464,11 @@ return
 ;surround with template
 su:
 send, ^eu
+return
+
+;code cleanup
+cc:
+send, !rtc
 return
 
 ;================================
