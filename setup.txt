@@ -1,14 +1,17 @@
 Location of vimrc:
 :echo $HOME
 
+cd %home%
 mklink _vimrc c:\settings\vim\_vimrc
 mklink /d vimfiles c:\settings\vim\vimfiles
 
 AutoHotKey:
+cd c:\ahk
 mklink AutoReload.ahk c:\settings\ahk\AutoReload.ahk
 mklink kb.ahk c:\settings\ahk\kb.ahk
 
 Cmder:
+cd c:\cmder
 mklink /d config c:\settings\cmder\config
 
 
