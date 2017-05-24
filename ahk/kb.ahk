@@ -62,7 +62,7 @@ if (command_input <> "")
 return
 
 ms:
-activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe")
+activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe")
 return
 
 vl:
@@ -80,7 +80,6 @@ mmsc:
 click_mouse_in_middle_of_screen()
 return
 
-
 ;Run autohotkey spy
 as:
 run_regular_program("C:\Program Files\AutoHotkey\au3_spy.exe")
@@ -92,7 +91,7 @@ activate_or_run_program_by_ahk_title("Visual Studio (Administrator)", "c:\utils\
 return
 
 vs:
-activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe")
+activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
 return
 
 ; Firefox
@@ -106,7 +105,7 @@ activate_or_run_program_by_ahk_class("Chrome_WidgetWin_1","C:\Program Files (x86
 return
 
 vm:
-activate_or_run_program_by_ahk_class("Vim", "C:\Program Files (x86)\Vim\vim74\gvim.exe")
+activate_or_run_program_by_ahk_class("Vim", "C:\Program Files (x86)\Vim\vim80\gvim.exe")
 return
 
 cy:
