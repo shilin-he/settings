@@ -48,7 +48,7 @@ Capslock::Esc
 
 ;==================================================
 ;bring up the R# context actions
-actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch"
+actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch,ba"
 +Capslock::
 Input,command_input,T1/1,{enter}{esc}{tab},%actions%
 if (ErrorLevel = Max | ErrorLevel = Timeout )
@@ -60,6 +60,11 @@ if (command_input <> "")
   SetTimer, %command_input%, -1
 }
 return
+
+;Ctrl-v to paste in the bash window
+#IfWinActive ahk_exe bash.exe
+^v::SendInput {Raw}%clipboard%
+#IfWinActive
 
 ms:
 activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe")
@@ -105,7 +110,7 @@ activate_or_run_program_by_ahk_class("Chrome_WidgetWin_1","C:\Program Files (x86
 return
 
 vm:
-activate_or_run_program_by_ahk_class("Vim", "C:\Program Files (x86)\Vim\vim80\gvim.exe")
+activate_or_run_program_by_ahk_class("Vim", "C:\Program Files (x86)\Vim\vim81\gvim.exe")
 return
 
 cy:
@@ -119,6 +124,11 @@ return
 
 ol:
 activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Office\Office15\outlook.exe")
+return
+
+ba:
+    bash_path = "C:\Windows\System32\bash.exe"
+    activate_or_run_program_by_ahk_class("ConsoleWindowClass", bash_path)
 return
 
 x:
@@ -356,7 +366,7 @@ return
 
 ;new class
 c:
-Send, !renc
+Send, ^!{insert}c
 return
 
 ;new delegate
@@ -371,7 +381,7 @@ return
 
 ;new interface
 i:
-Send, !reni
+Send, ^!{insert}i
 return
 
 ;Recent Files
@@ -467,7 +477,7 @@ return
 
 ;code cleanup
 cc:
-send, !rtc
+send, ^ec
 return
 
 ;================================
@@ -587,7 +597,7 @@ activate_or_run_program_by_ahk_class(class, program)
   if WinExist(class)
   {
     WinActivate
-    WinMaximize
+    ;WinMaximize
   }
   else
     Run, %program%
@@ -600,7 +610,7 @@ activate_or_run_program_by_ahk_title(title, program)
   IfWinExist, %title%
   {
     WinActivate
-    WinMaximize
+    ;WinMaximize
   }
   else
     Run, %program%
@@ -613,7 +623,7 @@ activate_or_run_program_by_ahk_exe(program)
   if WinExist(path)
   {
     WinActivate
-    WinMaximize
+;    WinMaximize
   }
   else
     Run, %program%
