@@ -48,7 +48,7 @@ Capslock::Esc
 
 ;==================================================
 ;bring up the R# context actions
-actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch,ba"
+actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch,ba,wt"
 +Capslock::
 Input,command_input,T1/1,{enter}{esc}{tab},%actions%
 if (ErrorLevel = Max | ErrorLevel = Timeout )
@@ -96,7 +96,11 @@ activate_or_run_program_by_ahk_title("Visual Studio (Administrator)", "c:\utils\
 return
 
 vs:
-activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
+activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe")
+return
+
+wt:
+activate_or_run_program_by_ahk_class("CASCADIA_HOSTING_WINDOW_CLASS", "c:\Users\mhe\AppData\Local\Microsoft\WindowsApps\wt.exe")
 return
 
 ; Firefox
