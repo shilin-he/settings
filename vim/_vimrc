@@ -14,12 +14,14 @@ set nu
 set relativenumber
 set history=200
 set ignorecase smartcase wrapscan infercase
+set nowrap
+set fileformats=unix,dos
 runtime macros/matchit.vim
 
 " Set column width
-set textwidth=79
+"set textwidth=79
 " Highlight column after 'textwidth'
-set colorcolumn=+1
+"set colorcolumn=+1
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
@@ -77,7 +79,7 @@ set fileencodings=utf-8
 set fileencodings=ucs-bom,utf8,prc
 set termencoding=utf-8
 set guifontwide=NSimsun:h12
-set diffexpr=MyDiff()
+"set diffexpr=MyDiff()
 
 function MyDiff()
   let opt = '-a --binary '
