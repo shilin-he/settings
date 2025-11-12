@@ -25,16 +25,6 @@ SetTitleMatchMode 2
 ;Shared variables 
 ;=========================================
 devenv = Visual Studio
-autohotkey_spy = 
-process_explorer = 
-divvy = 
-camrec_exe = 
-mingw = 
-cygwin = 
-conemu = 
-camrec = Recording
-camrec_preview = Preview
-autohotkey_scripts = 
 
 SysGet, screen_width, 59
 SysGet, screen_height, 60 
@@ -48,7 +38,7 @@ Capslock::Esc
 
 ;==================================================
 ;bring up the R# context actions
-actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,vl,mx,vm,vi,mmc,mmsc,as,lm,vs,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch,ba,wt"
+actions="pm,pmc,gu,gb,gs,gb,gs,gd,cm,cy,fd,ms,w,mx,vm,vi,mmc,mmsc,lm,vs,vc,eg,av,ol,x,ai,c,cd,d,cft,e,f,ne,gf,ft,ff,fs,fu,fw,i,ltn,le,lt,gm,sy,oc,owc,hu,pe,so,swa,pi,qq,t,su,jj,kk,vd,mmu,mmd,mml,mmr,ch,wt"
 +Capslock::
 Input,command_input,T1/1,{enter}{esc}{tab},%actions%
 if (ErrorLevel = Max | ErrorLevel = Timeout )
@@ -70,10 +60,6 @@ ms:
 activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe")
 return
 
-vl:
-activate_or_run_program_by_ahk_title("VLC media player", "C:\Program Files\VideoLAN\VLC\vlc.exe")
-return 
-
 ;Move the mouse center
 mmc:
 move_mouse_to_middle_of_active_screen()
@@ -85,27 +71,20 @@ mmsc:
 click_mouse_in_middle_of_screen()
 return
 
-;Run autohotkey spy
-as:
-run_regular_program("C:\Program Files\AutoHotkey\au3_spy.exe")
-return
-
-; Run VS2010 as admin
-av:
-activate_or_run_program_by_ahk_title("Visual Studio (Administrator)", "c:\utils\vs2010.lnk")
-return
-
 vs:
-activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe")
+activate_or_run_program_by_ahk_exe("C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\devenv.exe")
+return
+
+vc:
+activate_or_run_program_by_ahk_exe("C:\Users\mhe\AppData\Local\Programs\Microsoft VS Code\Code.exe")
+return
+
+eg:
+activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
 return
 
 wt:
 activate_or_run_program_by_ahk_class("CASCADIA_HOSTING_WINDOW_CLASS", "c:\Users\mhe\AppData\Local\Microsoft\WindowsApps\wt.exe")
-return
-
-; Firefox
-ff:
-activate_or_run_program_by_ahk_class("MozillaWindowClass", "firefox.exe")
 return
 
 ; Chrome
@@ -114,25 +93,11 @@ activate_or_run_program_by_ahk_class("Chrome_WidgetWin_1","C:\Program Files (x86
 return
 
 vm:
-activate_or_run_program_by_ahk_class("Vim", "C:\Program Files (x86)\Vim\vim81\gvim.exe")
+activate_or_run_program_by_ahk_class("Vim", "C:\Program Files\Vim\vim91\gvim.exe")
 return
-
-cy:
-activate_or_run_program_by_ahk_class("mintty", "C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -")
-return
-
-cm:
-activate_or_run_program_by_ahk_class("VirtualConsoleClass", "c:\cmder\cmder.exe")
-return
-
 
 ol:
-activate_or_run_program_by_ahk_exe("C:\Program Files (x86)\Microsoft Office\Office15\outlook.exe")
-return
-
-ba:
-    bash_path = "C:\Windows\System32\bash.exe"
-    activate_or_run_program_by_ahk_class("ConsoleWindowClass", bash_path)
+activate_or_run_program_by_ahk_exe("C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE")
 return
 
 x:
@@ -464,7 +429,7 @@ click_mouse_in_active_window(90,151)
 return
 
 ;Reformat Code
-;ff:
+ff:
 ;send, ^+!f
 ;return
 
