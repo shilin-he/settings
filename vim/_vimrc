@@ -1,13 +1,12 @@
 set nocompatible
-call pathogen#infect()
-syntax on
-filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 "source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 set autochdir
-colorscheme wombat
+
+" colorscheme wombat
+
 set cursorline
 highlight CursorLine term=bold cterm=bold
 set nu
@@ -143,7 +142,7 @@ set laststatus=2
 set statusline+=%F
 
 " Run JSHint on the current buffer every time you write it.
-autocmd! BufWritePost *.js JSHint
+" autocmd! BufWritePost *.js JSHint
 
 " Rainbow Parentheses 
 let g:rainbow_active = 1
@@ -151,3 +150,36 @@ let g:rainbow_active = 1
 set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
+
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'mattn/emmet-vim'                 " Emmet
+Plug 'luochen1990/rainbow'             " Rainbow parentheses
+Plug 'tpope/vim-commentary'            " Commenting
+Plug 'tpope/vim-repeat'                " Repeat
+Plug 'tpope/vim-surround'              " Surround
+Plug 'gruvbox-community/gruvbox'       " Colorscheme
+" Plug 'junegunn/fzf.vim'                " Fuzzy Finder
+" Plug 'dense-analysis/ale'              " Async linting
+
+call plug#end()
+
+" syntax enable
+" set background=dark
+set termguicolors
+colorscheme gruvbox
+
+" Netrw: force relative line numbers in all views
+augroup NetrwRelativeNumbers
+  autocmd!
+  " Trigger whenever a netrw buffer is created
+  autocmd FileType netrw setlocal number relativenumber
+
+  " Reinforce when re-entering netrw windows (e.g., after navigating dirs)
+  autocmd BufEnter,BufWinEnter,WinEnter * if &filetype ==# 'netrw' | setlocal number relativenumber | endif
+
+  " (Optional) make room for signs/diagnostics if you use them
+  " autocmd FileType netrw setlocal signcolumn=yes
+augroup END
