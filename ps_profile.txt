@@ -1,0 +1,11 @@
+Import-Module PSReadLine
+
+Set-PSReadLineOption -EditMode Vi
+Set-PSReadLineOption -ViModeIndicator Cursor
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineKeyHandler -Key Ctrl+p -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key Ctrl+n -Function HistorySearchForward
+# Ctrl-h / Ctrl-w in Insert mode
+Set-PSReadLineKeyHandler -Key Ctrl+h -Function BackwardDeleteChar -ViMode Insert
+Set-PSReadLineKeyHandler -Key Ctrl+w -Function BackwardDeleteWord -ViMode Insert
